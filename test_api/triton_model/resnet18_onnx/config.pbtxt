@@ -1,0 +1,26 @@
+name: "resnet18_onnx"
+platform: "onnxruntime_onnx"
+max_batch_size: 8
+input [
+  {
+    name: "inputhaha"
+    data_type: TYPE_FP32
+    format: FORMAT_NCHW
+    dims: [ 3, 224, 224 ]
+  }
+]
+output [
+  {
+    name: "outputhaha"
+    data_type: TYPE_FP32
+    dims: [ 1000 ]
+  }
+]
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_GPU
+    gpus: [0]  # 指定 GPU ID，0 表示使用第一个 GPU
+  }
+]
