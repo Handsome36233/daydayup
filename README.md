@@ -5,3 +5,5 @@
 [ddpm、ddim代码](./ddpm)
 
 [dali 测试](./test_dali)
+
+[c++ 调用 onnxruntime](./onnxruntime_cpp)
